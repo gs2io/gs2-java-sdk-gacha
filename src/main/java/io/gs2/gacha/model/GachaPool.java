@@ -49,6 +49,9 @@ public class GachaPool implements Serializable {
 	/** 排出確率を公開するか */
 	private String publicDrawRate;
 
+	/** ガチャ一覧の取得を許すか */
+	private String allowAccessGachaInfo;
+
 	/** 抽選実行を制限するか */
 	private String restrict;
 
@@ -211,6 +214,35 @@ public class GachaPool implements Serializable {
 	}
 
 	/**
+	 * ガチャ一覧の取得を許すかを取得
+	 *
+	 * @return ガチャ一覧の取得を許すか
+	 */
+	public String getAllowAccessGachaInfo() {
+		return allowAccessGachaInfo;
+	}
+
+	/**
+	 * ガチャ一覧の取得を許すかを設定
+	 *
+	 * @param allowAccessGachaInfo ガチャ一覧の取得を許すか
+	 */
+	public void setAllowAccessGachaInfo(String allowAccessGachaInfo) {
+		this.allowAccessGachaInfo = allowAccessGachaInfo;
+	}
+
+	/**
+	 * ガチャ一覧の取得を許すかを設定
+	 *
+	 * @param allowAccessGachaInfo ガチャ一覧の取得を許すか
+	 * @return this
+	 */
+	public GachaPool withAllowAccessGachaInfo(String allowAccessGachaInfo) {
+		this.allowAccessGachaInfo = allowAccessGachaInfo;
+		return this;
+	}
+
+	/**
 	 * 抽選実行を制限するかを取得
 	 *
 	 * @return 抽選実行を制限するか
@@ -365,6 +397,7 @@ public class GachaPool implements Serializable {
             .put("name", this.getName())
             .put("description", this.getDescription())
             .put("publicDrawRate", this.getPublicDrawRate())
+            .put("allowAccessGachaInfo", this.getAllowAccessGachaInfo())
             .put("restrict", this.getRestrict())
             .put("drawPrizeTriggerScript", this.getDrawPrizeTriggerScript())
             .put("drawPrizeDoneTriggerScript", this.getDrawPrizeDoneTriggerScript())

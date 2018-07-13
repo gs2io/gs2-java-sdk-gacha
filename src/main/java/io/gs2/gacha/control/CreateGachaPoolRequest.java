@@ -41,6 +41,9 @@ public class CreateGachaPoolRequest extends Gs2BasicRequest<CreateGachaPoolReque
 	/** 排出確率を公開するか */
 	private String publicDrawRate;
 
+	/** ガチャ一覧の取得を許すか */
+	private String allowAccessGachaInfo;
+
 	/** 抽選実行を制限するか */
 	private String restrict;
 
@@ -135,6 +138,35 @@ public class CreateGachaPoolRequest extends Gs2BasicRequest<CreateGachaPoolReque
 	 */
 	public CreateGachaPoolRequest withPublicDrawRate(String publicDrawRate) {
 		setPublicDrawRate(publicDrawRate);
+		return this;
+	}
+
+	/**
+	 * ガチャ一覧の取得を許すかを取得
+	 *
+	 * @return ガチャ一覧の取得を許すか
+	 */
+	public String getAllowAccessGachaInfo() {
+		return allowAccessGachaInfo;
+	}
+
+	/**
+	 * ガチャ一覧の取得を許すかを設定
+	 *
+	 * @param allowAccessGachaInfo ガチャ一覧の取得を許すか
+	 */
+	public void setAllowAccessGachaInfo(String allowAccessGachaInfo) {
+		this.allowAccessGachaInfo = allowAccessGachaInfo;
+	}
+
+	/**
+	 * ガチャ一覧の取得を許すかを設定
+	 *
+	 * @param allowAccessGachaInfo ガチャ一覧の取得を許すか
+	 * @return this
+	 */
+	public CreateGachaPoolRequest withAllowAccessGachaInfo(String allowAccessGachaInfo) {
+		setAllowAccessGachaInfo(allowAccessGachaInfo);
 		return this;
 	}
 

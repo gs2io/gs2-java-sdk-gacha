@@ -341,6 +341,7 @@ public class Gs2GachaClient extends AbstractGs2Client<Gs2GachaClient> {
 				.put("name", request.getName());
         if(request.getDescription() != null) body.put("description", request.getDescription());
         if(request.getPublicDrawRate() != null) body.put("publicDrawRate", request.getPublicDrawRate());
+        if(request.getAllowAccessGachaInfo() != null) body.put("allowAccessGachaInfo", request.getAllowAccessGachaInfo());
         if(request.getRestrict() != null) body.put("restrict", request.getRestrict());
         if(request.getDrawPrizeTriggerScript() != null) body.put("drawPrizeTriggerScript", request.getDrawPrizeTriggerScript());
         if(request.getDrawPrizeDoneTriggerScript() != null) body.put("drawPrizeDoneTriggerScript", request.getDrawPrizeDoneTriggerScript());
@@ -509,6 +510,7 @@ public class Gs2GachaClient extends AbstractGs2Client<Gs2GachaClient> {
 		ObjectNode body = JsonNodeFactory.instance.objectNode();
         if(request.getDescription() != null) body.put("description", request.getDescription());
         if(request.getPublicDrawRate() != null) body.put("publicDrawRate", request.getPublicDrawRate());
+        if(request.getAllowAccessGachaInfo() != null) body.put("allowAccessGachaInfo", request.getAllowAccessGachaInfo());
         if(request.getRestrict() != null) body.put("restrict", request.getRestrict());
         if(request.getDrawPrizeTriggerScript() != null) body.put("drawPrizeTriggerScript", request.getDrawPrizeTriggerScript());
         if(request.getDrawPrizeDoneTriggerScript() != null) body.put("drawPrizeDoneTriggerScript", request.getDrawPrizeDoneTriggerScript());
